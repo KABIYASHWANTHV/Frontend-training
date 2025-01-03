@@ -1,3 +1,7 @@
+body
+{
+    overflow-x: hidden;
+}
 *
 {
     margin:0;
@@ -21,6 +25,7 @@ nav
     align-items: center;
     gap: 10px; 
     margin-top: 15px;
+    padding-right:40px;
 }
 #right a 
 {
@@ -29,6 +34,10 @@ nav
     font-family: sans-serif;
     font-size: 16px;
     padding: 0 20px;
+}
+#right a:hover
+{
+    color: #f2cc8f;   
 }
 #right button 
 {
@@ -93,6 +102,10 @@ nav
     font-family: sans-serif;
     font-size:30px;
 }
+#image #r iframe
+{
+    border-radius:20px;
+}
 #l h2:hover
 {
     color: black;
@@ -106,9 +119,20 @@ nav
     padding:10px 20px;
     font-size: 15px;
 }
+#l a
+{
+    font-size: 16px;
+    padding: 20px;
+    cursor: pointer;
+}
+#l a:hover
+{
+    color: #f2cc8f;
+}
 #l button:hover
 {
     background-color: #e97648;
+    border: #e07a5f;
 }
 #image>#r
 {
@@ -120,7 +144,7 @@ nav
 {
     color:black;
     font-family: sans-serif;
-    font-size:30px;
+    font-size:28px;
     text-align: center;
 }
 #s1
@@ -130,26 +154,21 @@ nav
 #l1 
 {
     font-family:sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     float: left;
-    padding-left:40px;
+    padding-left:80px;
 }
 #l1 p
 {
     opacity: 0.5;
-    font-size:16px;
+    font-size:18px;
     font-family: sans-serif;
-}
-#r1
-{
-    padding-right: 100px;
-
 }
 #r1 img
 {
     height:150px;
     width:200px;
-    padding-left:15pc;
+    padding-left:8pc;
 }
 #s1 #r1 p
 {
@@ -165,7 +184,7 @@ nav
     font-size:20px;
     opacity: 0.5;
     position:absolute;
-    right:22pc
+    right:25pc
 }
 #s1 #r2 img
 {
@@ -189,7 +208,7 @@ nav
     font-size:20px;
     opacity: 0.5;
     position:absolute;
-    right:4pc
+    right:6pc;
 }
 #s2 
 {
@@ -204,41 +223,47 @@ nav
 }
 #s2 #id1
 {
-    padding-right:100pc;
     padding: 60px;
-    width: 45%;
+    width: 55%;
     border-radius: 10px;
     background-color: #efe1caa6;
 }
-#s2 #id1 h1
+#s2 #id1 h2
 {
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 28px;
 }
 #s2 #id1 p
 {
     color: #424344;
+    font-size: 18px;
 }
-#s2 #id1 input
+#s2 #id1 .input
 {
-    padding:10px 15px;
+    padding: 10px 15px;
+    background-color: white;
     border-radius:50px;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid #ccc;
+}
+#s2 #id1 .input .ip1
+{
+    padding-left: 40px;
+    max-width: 150px;
+}
+#s2 #id1 .input .ip1 input
+{
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border:2px solid white;
+}
+#s2 #id1 .input .ip1 input:hover
+{
+    border-color: white;
 }
 #s2 #id1 p
 {
     font-family: sans-serif;
     font-size:18px;
-}
-#s2 #id1 input 
-{
-    text-align: center;
-    width:300px;
-    font-size: 16px;
-    padding: 15px 15px;
 }
 #s2 #id1 button
 {
@@ -248,7 +273,7 @@ nav
     padding: 10px 15px;
     cursor: pointer;
     position: absolute;
-    right:40pc;
+    right:35pc;
     top:26.3pc;
     background-color: #f2cc8f;
     color: white;
@@ -262,18 +287,19 @@ nav
 {
     font-size:24px;
     position: absolute;
-    right: 57pc;
-    top:26.5pc;
+    right: 56pc;
+    top:26.8pc;
 }
 #member
 {
     text-align: center;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 28px;
 }
 #s3 #div2
 {
     font-family: sans-serif;
+    padding-left: 50px;
 }
 #s3 #div2 table 
 {
@@ -314,6 +340,7 @@ color: #81b29a;
 #div3
 {
     font-family: sans-serif;
+    padding-left: 200px;
 }
 #s3 {
     display: flex;
@@ -330,8 +357,8 @@ color: #81b29a;
     max-width: 600px;
 }
 
-#div2 h3 {
-    font-size: 24px;
+#div2 h4 {
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -355,15 +382,15 @@ color: #81b29a;
     padding-left: 150px;
 }
 
-#div3 h3 {
-    font-size: 24px;
+#div3 h4 {
+    font-size: 20px;
 }
 #div3 #div4
 {
     background-color: rgb(61, 64, 91);
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
-    width:300px;
+    width:auto;
 }
 #div4 h2 {
     color: white;
@@ -373,30 +400,37 @@ color: #81b29a;
 
 #div4 input
 {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border:none;
+    width: 90%;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 30px;
     border-radius: 50px;
+    border: none;
 }
-
+#div4 input:hover
+{
+    border: 2px solid black;
+}
 #div4 textarea 
 {
     resize: none;
-    width: 50%;
-    padding: 10px;
+    width: 90%;
+    padding: 10px 10px 10px 20px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 10px;
+}
+#div4 textarea:hover
+{
+    border:2px solid black;
 }
 #div4 button {
     background-color: #f2cc8f;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 20px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    width:50%;
+    width:378px;
 }
 
 #div4 button:hover {
@@ -420,123 +454,100 @@ color: #81b29a;
     margin-bottom: 20px;
 }
 
-#date {
-    flex: 1;
-    text-align: center;
-    background-color: #81b29a;
-    height: 80px;
-    padding: 10px;
-    border-radius: 10px;
-}
 
-#date h3 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-#date p {
-    font-size: 16px;
-    color: white;
-}
 
 #img2 {
-    flex: 2;
     min-width: 200px;
     text-align: center;
 }
-
-#img2 img {
-    max-width: 300px;
-    height: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#div5 {
-    flex: 2;
-    min-width: 200px;
-    padding: 10px;
-}
-
-#div5 h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #3d405b;
-}
-
-#div5 p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #3d405b;
-}
-
-#s5 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
+.events{
+    padding: 6% 8%;
+    background-color: #f4f1de;
     font-family: sans-serif;
-    background-color: #fcecd3;
+}
+.events img{
+    border-radius: 20px;
+}
+.events .h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+.events .events-container{
+    margin-top: 2%;
+}
+.events .events-container .up{
+    padding: 20px 30px;
+    display: flex;
+    gap:3%;
+    width: 100%;
+    height: 35vh;
+}
+.events .events-container .up .up-upper{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    gap: 30px;
 }
 
-#s5 h2 {
-    flex-basis: 100%; 
-    text-align: left;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-#date1 {
-    flex: 1;
+.events .calendar{
     text-align: center;
+    border-radius: 20px;
+    padding: 20px 50px;
+    max-height: 25%;
     background-color: #81b29a;
-    height: 80px;
-    padding: 10px;
-    border-radius: 10px;
 }
-
-#date1 h3 {
-    font-size: 32px;
-    margin-bottom: 10px;
+.events .calendar p{
+    font-size: 38px;
+    font-weight: 500;
 }
-
-#date1 p {
-    font-size: 16px;
+.events .calendar .h2{
+    font-size: 15px;
+    font-weight: 700;
     color: white;
 }
-
-#img3 {
-    flex: 2;
-    min-width: 200px;
-    text-align: center;
+.events .up-activities{
+    width: 40%;
 }
-
-#img3 img {
-    max-width: 300px;
-    height: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-#div6 {
-    flex: 2;
-    min-width: 200px;
-    padding: 10px;
-}
-
-#div6 h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.events .up-activities .h4{
+    font-size: 26px;
     color: #3d405b;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
 }
-
-#div6 p {
+.events .up-activities .h4:hover{
+    color: #f2cc8f;
+}
+.violet{
+    color: #3d405b;
+    font-size: 30px;
+}
+.boldness{
+    font-weight: 600;
+}
+.small-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.small-container button{
+    background-color: #f2cc8f;
+    color: white;
     font-size: 16px;
-    line-height: 1.5;
-    color: #3d405b;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.events .small-container button:hover{
+    background-color: #fb8449;
+}
+.bg{
+    border-radius: 20px;
+    background-color: white;
 }
 #s6
 {
@@ -577,12 +588,13 @@ color: #81b29a;
 #s6 #div7
 {
     position: absolute;
-    left: 55pc;
-    top:198pc;
+    left: 48pc;
+    top:210pc;
     background-color: #3d405b;
     color: white;
     padding: 30px;
     border-radius: 15px;
+    z-index: 8;
 }
 #s6 #div7 button
 {
@@ -592,6 +604,13 @@ color: #81b29a;
     width:100%;
     border: none;
 }
+.img4
+{
+    position: absolute;
+    height: 210px;
+    top:210pc;
+}
+
 .contact-down{
     display: flex;
     gap: 30%;
@@ -600,8 +619,12 @@ color: #81b29a;
 }
 .logo-container1{
     display: flex;
-    gap: 3%;
+    gap: 5%;
     cursor: pointer;
+}
+.logo-container1 img
+{
+    padding-left: 50px;
 }
 .logo-container1 .h2{
     font-size: 24px;
