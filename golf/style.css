@@ -558,6 +558,11 @@ color: #81b29a;
 #s6 input[type="text"] {
     margin-right: 30px; 
 }
+.id
+{
+    background-color: white;
+    border-radius: 10px;
+}
 #s6 input
 {
     border-radius: 50px;
@@ -613,7 +618,7 @@ color: #81b29a;
 
 .contact-down{
     display: flex;
-    gap: 30%;
+    gap: 20%;
     margin: 7% 0%;
     font-family: sans-serif;
 }
