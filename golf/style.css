@@ -304,8 +304,8 @@ nav
 #s3 #div2 table 
 {
     border-collapse: collapse;
-    border-radius: 10px;
     overflow: hidden;
+    border-radius: 10px;
 }
 #s3 #div2 table th,td
 {
@@ -315,6 +315,7 @@ nav
 {
     background-color: rgb(61, 64, 91);
     color: white;
+    border-radius: 15px;
 }
 #s3 #div2 table tbody td
 {
