@@ -74,10 +74,12 @@ body {
 {
     font-size: 16px;
 }
-/* .div2
+.div2
 {
-    
-} */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
 .div3
 {
     background-color: #f7f7f7;
@@ -85,7 +87,8 @@ body {
     border-radius: 25px;
     padding: 60px;
     width:30%;
-}
+    margin-right: 600px;
+} 
 .div3 h6
 {
     font-size: 15px;
@@ -100,8 +103,14 @@ body {
     font-size: 14px;
     color: #4a4a4a;
 }
+.div4
+{
+    position: absolute;
+    padding-left: 40pc;
+}
 .div4 iframe
 {
-    z-index: 3;
-    position: absolute;
+    border-radius: 35px;
+    width: 500px;
+    height: 300px;
 }
