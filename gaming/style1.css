@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.img
+{
+    background-image: url("/gaming/banner-bg.jpg");
+    height:60pc;
+    border-radius: 0px 0px 150px 150px;
+}
+.header {
+    padding:50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav
+{
+    padding-left:30px;
+}
+.nav img {
+    width:158px;
+}
+
+.navbar {
+    font-family: sans-serif;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding-left:400px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.header .sign 
+{
+    padding-right: 30px;   
+}
+.header .sign a
+{
+    text-transform:uppercase ;
+    border-radius: 50px;
+    background-color: #ee626b;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.bg
+{
+    background-image: url("/gaming/page-heading-bg.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 150px 150px;
+}
+.div1
+{
+    padding: 90px 0px 90px 0px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+.div1 h3
+{
+    font-size: 48px;
+}
+.div1 span
+{
+    font-size: 16px;
+}
+/* .div2
+{
+    
+} */
+.div3
+{
+    background-color: #f7f7f7;
+    font-family: sans-serif;
+    border-radius: 25px;
+    padding: 60px;
+    width:30%;
+}
+.div3 h6
+{
+    font-size: 15px;
+    color: #ee626b;
+}
+.div3 h2
+{
+    font-size: 36px;
+}
+.div3 p
+{
+    font-size: 14px;
+    color: #4a4a4a;
+}
+.div4 iframe
+{
+    z-index: 3;
+    position: absolute;
+}

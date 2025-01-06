@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.img
+{
+    background-image: url("/gaming/banner-bg.jpg");
+    height:60pc;
+    border-radius: 0px 0px 150px 150px;
+}
+.header {
+    padding:50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav
+{
+    padding-left:30px;
+}
+.nav img {
+    width:158px;
+}
+
+.navbar {
+    font-family: sans-serif;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding-left:400px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.header .sign 
+{
+    padding-right: 30px;   
+}
+.header .sign a
+{
+    text-transform:uppercase ;
+    border-radius: 50px;
+    background-color: #ee626b;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+    font-family: sans-serif;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.container .row {
+    flex: 1;
+    margin-left: 30px;
+}
+.row h6
+{
+    color: white;
+    font-size: 20px;
+}
+.row h2
+{
+    color: white;
+    font-size: 48px;
+}
+.row p
+{
+    color: white;
+    font-size: 14px;
+}
+.row img
+{
+    position: absolute;
+    left:13pc;
+    top: 27pc;
+}
+.search-input input
+{
+    max-width: 450px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border-radius: 25px;
+    background-color: #fff;
+    border: none;
+    padding: 0px 25px;
+    font-size: 14px;
+    color: #7a7a7a;
+}
+.search-input button
+{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ee626b;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    right: 42.8pc;
+    top: 39.8pc;
+}
+.search-input button:hover
+{
+    background-color: #0071f8;
+    cursor: pointer;
+}
+.right-image {
+    max-width: 300px;
+}
+
+.right-image img {
+    width: 100%;
+    display: block;
+    border-radius: 25px;
+}
+.right-image .image1
+{
+    margin-right: 40px;
+}
+.right-image .price
+{
+    position: absolute;
+    right: 6pc;
+    top: 21pc;
+    border-radius: 25px;
+    background-color: #008af8;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    padding: 4px 15px;
+}
+.right-image .offer
+{
+    position: absolute;
+    left: 54pc;
+    top:36pc;
+    border-radius: 50%;
+    background-color: #ee626b;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.item {
+    position: absolute;
+    top: 55pc;
+    left: 10%;
+    text-align: center;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    width: 10pc;
+    font-family: sans-serif;
+    z-index: 10;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.item .image2 img
+{
+    background-color: #008af8;
+    padding: 20px;
+    border-radius:50px;
+}
+.item .image2 img:hover
+{
+    background-color: #ee626b;
+}
+a
+{
+    text-decoration: none;
+}
+.item h4
+{
+    text-transform: uppercase;
+    font-size: 17px;
+    color: black;
+}
+.item1 {
+    position: absolute;
+    top: 55pc;
+    left: 31%;
+    text-align: center;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    width: 10pc;
+    font-family: sans-serif;
+    z-index: 10;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.item1 .image3 img
+{
+    background-color: #008af8;
+    padding: 20px;
+    border-radius:50px;
+}
+.item1 .image3 img:hover
+{
+    background-color: #ee626b;
+}
+a
+{
+    text-decoration: none;
+}
+.item1 h4
+{
+    text-transform: uppercase;
+    font-size: 17px;
+    color: black;
+}
+.item2 {
+    position: absolute;
+    top: 55pc;
+    left: 52%;
+    text-align: center;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    width: 10pc;
+    font-family: sans-serif;
+    z-index: 10;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.item2 .image4 img
+{
+    background-color: #008af8;
+    padding: 20px;
+    border-radius:50px;
+}
+.item2 .image4 img:hover
+{
+    background-color: #ee626b;
+}
+a
+{
+    text-decoration: none;
+}
+.item2 h4
+{
+    text-transform: uppercase;
+    font-size: 17px;
+    color: black;
+}
+.item3 {
+    position: absolute;
+    top: 55pc;
+    left: 73%;
+    text-align: center;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    width: 10pc;
+    font-family: sans-serif;
+    z-index: 10;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.item3 .image5 img
+{
+    background-color: #008af8;
+    padding: 20px;
+    border-radius:50px;
+}
+.item3 .image5 img:hover
+{
+    background-color: #ee626b;
+}
+a
+{
+    text-decoration: none;
+}
+.item3 h4
+{
+    text-transform: uppercase;
+    font-size: 17px;
+    color: black;
+}
