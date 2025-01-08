@@ -1,17 +1,18 @@
-let num=95;
-if(num>=90 && num<=100)
+let num=85;
+switch(Math.floor(num/10))
 {
-    console.log("A");
-}
-else if(num>=80 && num<=89)
-{
-    console.log("B")
-}
-else if(num>=70 && num<=79)
-{
-    console.log("C");
-}
-else if(num<70)
-{
-    console.log("F");
+    case 9:
+        console.log("A");
+        break;
+    case 8:
+        console.log("B");
+        break;
+    case 7:
+        console.log("C");
+        break;
+    case 6:
+        console.log("F");
+        break;
+    default:
+        break;
 }
