@@ -75,19 +75,29 @@ body {
 {
     font-size: 25px;
 }
+.div2
+{
+    display: flex;
+    margin-top: 5pc;
+}
 .div3 img
 {
+    margin-top: 2pc;
+    margin-left: 5pc;
     overflow: hidden;
     border-radius: 25px;
+    height: 29pc;
+    width:30pc;
 }
 .div4
 {
-    font-size: 27px;
     font-family: sans-serif;
-    margin-bottom: 20px;
     color: #1e1e1e;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-left: 8pc;
+}
+.div4 h4
+{
+    font-size: 27px;
 }
 .div4 em
 {
@@ -141,4 +151,32 @@ body {
 {
     background-color: #0071f8;
     cursor: pointer;
+}
+.div4 .ul
+{
+    margin-inline-start: -2.5pc;
+}
+.div4 .ul ul
+{
+    margin-top:60px;
+}
+.div4 .ul a
+{
+    text-decoration: none;
+    color: #0071f8;
+}
+.div4 ul li
+{
+    display: block;
+    margin: 20px 0px;
+    font-size: 14px;
+    color: #0071f8;
+}
+.div4 ul li span
+{
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 120px;
+    display: inline-block;
+    color: #aaa;
 }
