@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 .img
 {
@@ -297,4 +298,274 @@ a
     text-transform: uppercase;
     font-size: 17px;
     color: black;
+}
+.div1
+{
+    margin-top: 15pc;
+    font-family: sans-serif;
+}
+.div2 h6
+{
+    color: #ee626b;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.div2 .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ee626b;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 30px;
+    border-radius: 25px;
+}
+.header-content h2
+{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 20px;
+    line-height: 44px;
+}
+.thumb img
+{
+    width:250px;
+    border-radius:25px;
+    height: 200px;
+}
+.img1
+{
+    background-color: #eeeeee;
+    width: 15.5pc;
+    height: 18pc;
+    border-radius: 25px;
+}
+.img1 em
+{
+    font-style: normal;
+    font-size: 14px;
+}
+.img1 .price
+{
+    text-align: right;
+    position: absolute;
+    left: 9pc;
+    top: 85.7pc;
+    border-radius: 10px;
+    background-color: #008af8;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 15px 6px 15px;
+}
+.cat .category
+{
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 1pc;
+    display: inline-block;
+}
+.cat
+{
+    margin-left: 2pc;
+}
+.cat i
+{
+    color: white;
+    position: absolute;
+    top: 98pc;
+    left:10pc;
+    background-color:#ee626b;
+    padding:10px;
+    border-radius: 50px;
+}
+.cat i:hover
+{
+    background-color: #0071f8;
+}
+.cat h4:hover
+{
+    color: #0071f8;
+}
+.img2
+{
+    background-color: #eeeeee;
+    width: 15.5pc;
+    height: 18pc;
+    border-radius: 25px;
+    position: absolute;
+    top: 84pc;
+    left: 20pc;
+}
+.img2 .price1
+{
+    text-align: right;
+    position: absolute;
+    left: 10pc;
+    top: 3pc;
+    border-radius: 10px;
+    background-color: #008af8;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 15px 6px 15px;
+}
+
+.cat1 .category1
+{
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 1pc;
+    display: inline-block;
+}
+.cat1
+{
+    margin-left: 2pc;
+}
+.cat1 i
+{
+    color: white;
+    position: absolute;
+    top: 14pc;
+    left:10pc;
+    background-color:#ee626b;
+    padding:10px;
+    border-radius: 50px;
+}
+.cat1 i:hover
+{
+    background-color: #0071f8;
+}
+.cat1 h4:hover
+{
+    color: #0071f8;
+}
+.img3
+{
+    background-color: #eeeeee;
+    width: 15.5pc;
+    height: 18pc;
+    border-radius: 25px;
+    position: absolute;
+    top: 84pc;
+    left: 40pc;
+}
+.img3 .price2
+{
+    text-align: right;
+    position: absolute;
+    left: 10pc;
+    top: 1.7pc;
+    border-radius: 10px;
+    background-color: #008af8;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 15px 6px 15px;
+}
+.img3 em
+{
+font-style: normal;
+    font-size: 14px;
+}
+.cat2 .category2
+{
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 1pc;
+    display: inline-block;
+}
+.cat2
+{
+    margin-left: 2pc;
+}
+.cat2 i
+{
+    color: white;
+    position: absolute;
+    top: 14pc;
+    left:10pc;
+    background-color:#ee626b;
+    padding:10px;
+    border-radius: 50px;
+}
+.cat2 i:hover
+{
+    background-color: #0071f8;
+}
+.cat2 h4:hover
+{
+    color: #0071f8;
+}
+.img4
+{
+    background-color: #eeeeee;
+    width: 15.5pc;
+    height: 18pc;
+    border-radius: 25px;
+    position: absolute;
+    top: 84pc;
+    left: 60pc;
+}
+.img4 .price3
+{
+    text-align: right;
+    position: absolute;
+    left: 10pc;
+    top: 1.7pc;
+    border-radius: 10px;
+    background-color: #008af8;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 15px 6px 15px;
+}
+.img4 em
+{
+font-style: normal;
+    font-size: 14px;
+}
+.cat3 .category3
+{
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 1pc;
+    display: inline-block;
+}
+.cat3
+{
+    margin-left: 2pc;
+}
+.cat3 i
+{
+    color: white;
+    position: absolute;
+    top: 14pc;
+    left:10pc;
+    background-color:#ee626b;
+    padding:10px;
+    border-radius: 50px;
+}
+.cat3 i:hover
+{
+    background-color: #0071f8;
+}
+.cat3 h4:hover
+{
+    color: #0071f8;
 }

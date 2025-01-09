@@ -180,3 +180,126 @@ body {
     display: inline-block;
     color: #aaa;
 }
+footer{
+    position: absolute;
+    background-image: url("Documents/footer-bg.jpg");
+    padding: 30px 90px 80px;
+    text-align: center;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 3%;
+    width: 100%;
+    margin-bottom: -10%;
+}
+.horizontal-line{
+    margin: 6% 8%;
+}
+.description-box{
+    margin: 6% 8%;
+    background-color: #f7f7f7;
+    padding: 60px;
+    border-radius: 30px;
+    height: 50vh;
+    width: 80%;
+    position: relative;
+}
+.description-box .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 23%;
+}
+.description-box .head h6{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.content{
+    opacity: 0;
+    transform: translateY(10%);
+    transition: transform 0.3s ease;
+    position: absolute;
+}
+.active{
+    opacity: 1;
+    transform: translateY(0%);
+}
+.description-box .head hr{
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    transform: rotate(180deg);
+}
+.top-categories{
+    margin: 8% 3% 5%;
+}
+.top-categories .top-categories-up {
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 5%;
+}
+.top-categories .top-categories-up .top-categories-up-left h6{
+    text-transform: uppercase;
+    color: #ee626b;
+    font-weight: 700;
+}
+.top-categories .top-categories-up .top-categories-up-left h1{
+    font-size: 36px;
+    font-weight: 700;
+    color:#1e1e1e;
+}
+.top-categories .top-categories-up .top-categories-up-right{
+    margin-top: 5%;
+}
+.top-categories .top-categories-up .top-categories-up-right button{
+    background-color: #ee626b;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px 30px;
+    transition: 0.3s ease-in-out;
+}
+.top-categories .top-categories-up .top-categories-up-right button:hover{
+    background-color: #0071f8;
+}
+.top-categories .top-categories-images{
+    padding: 5% 3%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.top-categories .top-categories-images .images-down{
+    height: 35vh;
+    background-color: #0071f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    margin:0;
+    padding: 0;
+}
+.top-categories .top-categories-images .images-down h3{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 1% 0%;
+    margin-top: 7%;
+}
+.top-categories .top-categories-images .images-down img{
+    border-radius: 20px;
+    margin-top: 5%;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+footer a:hover{
+    color: gainsboro;
+}
