@@ -169,13 +169,13 @@ body {
 }
 .item {
     position: absolute;
-    top: 55pc;
-    left: 10%;
+    top: 54pc;
+    left: 6%;
     text-align: center;
     background-color: white;
     padding: 35px;
     border-radius: 15px;
-    width: 10pc;
+    width: 12pc;
     font-family: sans-serif;
     z-index: 10;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -202,13 +202,13 @@ a
 }
 .item1 {
     position: absolute;
-    top: 55pc;
-    left: 31%;
+    top: 54pc;
+    left: 28.5%;
     text-align: center;
     background-color: white;
     padding: 35px;
     border-radius: 15px;
-    width: 10pc;
+    width: 12pc;
     font-family: sans-serif;
     z-index: 10;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -235,13 +235,13 @@ a
 }
 .item2 {
     position: absolute;
-    top: 55pc;
-    left: 52%;
+    top: 54pc;
+    left: 51.1%;
     text-align: center;
     background-color: white;
     padding: 35px;
     border-radius: 15px;
-    width: 10pc;
+    width: 12pc;
     font-family: sans-serif;
     z-index: 10;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -268,13 +268,13 @@ a
 }
 .item3 {
     position: absolute;
-    top: 55pc;
-    left: 73%;
+    top: 54pc;
+    left: 73.8%;
     text-align: center;
     background-color: white;
     padding: 35px;
     border-radius: 15px;
-    width: 10pc;
+    width: 12pc;
     font-family: sans-serif;
     z-index: 10;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -304,6 +304,10 @@ a
     margin-top: 15pc;
     font-family: sans-serif;
 }
+.div2
+{
+    margin-left: 8pc;
+}
 .div2 h6
 {
     color: #ee626b;
@@ -329,6 +333,7 @@ a
     line-height: 50px;
     padding: 0px 30px;
     border-radius: 25px;
+    margin-right: 8pc;
 }
 .header-content h2
 {
@@ -338,18 +343,20 @@ a
     margin-top: 20px;
     line-height: 44px;
 }
+
 .thumb img
 {
-    width:250px;
+    width:16pc;
     border-radius:25px;
     height: 200px;
 }
 .img1
 {
     background-color: #eeeeee;
-    width: 15.5pc;
+    width: 15pc;
     height: 18pc;
     border-radius: 25px;
+    margin-left:8pc;
 }
 .img1 em
 {
@@ -386,7 +393,7 @@ a
     color: white;
     position: absolute;
     top: 98pc;
-    left:10pc;
+    left:18pc;
     background-color:#ee626b;
     padding:10px;
     border-radius: 50px;
@@ -402,12 +409,12 @@ a
 .img2
 {
     background-color: #eeeeee;
-    width: 15.5pc;
+    width: 15pc;
     height: 18pc;
     border-radius: 25px;
     position: absolute;
     top: 84pc;
-    left: 20pc;
+    left: 24pc;
 }
 .img2 .price1
 {
@@ -456,7 +463,7 @@ a
 .img3
 {
     background-color: #eeeeee;
-    width: 15.5pc;
+    width: 15pc;
     height: 18pc;
     border-radius: 25px;
     position: absolute;
@@ -514,12 +521,12 @@ font-style: normal;
 .img4
 {
     background-color: #eeeeee;
-    width: 15.5pc;
+    width: 15pc;
     height: 18pc;
     border-radius: 25px;
     position: absolute;
     top: 84pc;
-    left: 60pc;
+    left: 56.2pc;
 }
 .img4 .price3
 {
