@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function replaceRepeatedNames(sentence) 
+{
+    let words = sentence.split(' ');
+    let seen = {};
+
+    for (let i = 0; i < words.length; i++) 
+    {
+        if (seen[words[i]]) 
+        {
+            words[i] = "CHANGED";
+        } 
+        else 
+        {
+            seen[words[i]] = true;
+        }
+    }
+    return words.join(' ');
+}
+console.log(replaceRepeatedNames("John Mary John Alex Mary"));
+</script>
+</html>

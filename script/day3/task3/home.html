@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function replaceEvenWords(sentence) 
+    {
+        let words = sentence.split(' ');
+
+        for (let i = 0; i < words.length; i += 2) 
+        {
+            words[i] = "EVEN";
+        }
+        return words.join(' ');
+    }
+    console.log(replaceEvenWords("I am learning JavaScript every day"));
+</script>
+</html>
