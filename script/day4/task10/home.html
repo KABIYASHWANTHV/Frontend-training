@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+<body>
+    
+</body>
+<script>
+const a = [1, 2, 3, 5];
+const b = [4, 7];
+const c = 6;
+const result2 = [];
+const inputs = [];
+for (let i = 0; i < a.length; i++) {
+  inputs.push(a[i]);
+}
+for (let i = 0; i < b.length; i++) {
+  inputs.push(b[i]);
+}
+inputs.push(c);
+for (let i = 0; i < inputs.length; i++) {
+  if (!result2.includes(inputs[i])) {
+    result2.push(inputs[i]);
+  }
+}
+console.log(result2);
+</script>
+</html>
