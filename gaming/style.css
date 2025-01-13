@@ -1076,10 +1076,134 @@ font-style: normal;
     width:12.5pc;
     border-radius:25px;
 }
+.div6
+{
+    font-family: sans-serif;
+}
+.div7
+{
+    margin-top:30pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div7 img
+{
+    border-radius: 25px;
+}
+.left
+{
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 195pc;
+    left: 5pc;
+    padding: 80px;
+    border-radius: 25px;
+}
+.left h6
+{
+    color: #ee626b;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.left h2
+{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 2pc;
+    line-height: 44px;
+}
+.left em
+{
+    font-style: normal;
+    color: #0071f8
+}
+.left p
+{
+    margin-top: 2pc;
+    color:#4a4a4a;
+    font-weight: 600;
+    font-size: 16px;
+}
+.left a
+{
+    text-decoration: none !important;
+    display: inline-block;
+    background-color: #ee626b;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 30px;
+    border-radius: 25px;
+    margin-top: 2pc;
+}
+.right
+{
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 205pc;
+    left: 46pc;
+    padding:80px;
+    border-radius: 25px;
+}
+.right h6
+{
+    color: #ee626b;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: -1pc;
+}
+.right h2
+{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 44px;
+}
+.right em
+{
+    font-style: normal;
+    color: #0071f8;
+}
+.right input
+{
+    width: 50%;
+    height: 50px;
+    outline: none;
+    border-radius: 25px;
+    background-color: #fff;
+    border: none;
+    padding: 0px 25px;
+    font-size: 14px;
+    color: #7a7a7a;
+}
+.right button
+{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ee626b;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0px 25px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    top:20pc;
+    right:4pc
+}
 footer
 {
     font-family: sans-serif;
-    margin-top: 30pc;
+    margin-top: 20pc;
     background-color: #0071f8;
     background-repeat: no-repeat;
     background-size: cover;
