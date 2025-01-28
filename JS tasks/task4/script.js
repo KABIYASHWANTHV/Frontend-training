@@ -1,10 +1,12 @@
 $(document).ready(function () {
     let expenses = [];
-    function updateTable() {
+    
+    function updateTable(filteredExpenses) {
         let totalExpense = 0;
         let tbody = $('#expenseTable');
         tbody.empty();
-        expenses.forEach((expense, index) => {
+        
+        filteredExpenses.forEach((expense, index) => {
             totalExpense += parseFloat(expense.amount);
             tbody.append(`<tr>
                 <td><input type="text" value="${expense.name}" class="form-control edit-name" data-index="${index}"></td>
@@ -19,14 +21,17 @@ $(document).ready(function () {
                 </td>
                 <td><input type="date" value="${expense.date}" class="form-control edit-date" data-index="${index}"></td>
                 <td>
-                    <button class="btn btn-success edit-expense" data-index="${index}">Edit</button>
-                    <button class="btn btn-danger delete-expense" data-index="${index}">Delete</button>
+                   <div class="d-flex justify-content-start">
+                        <button class="btn btn-success edit-expense ms-2" data-index="${index}">Edit</button>
+                        <button class="btn btn-danger delete-expense ms-2" data-index="${index}">Delete</button>
+                    </div>
                 </td>
             </tr>`);
         });
+        
         $('#totalExpense').text(totalExpense);
     }
-    
+
     $('#expenseForm').submit(function (e) {
         e.preventDefault();
         let expense = {
@@ -36,14 +41,14 @@ $(document).ready(function () {
             date: $('#date').val()
         };
         expenses.push(expense);
-        updateTable();
+        updateTable(expenses);
         this.reset();
     });
 
     $(document).on('click', '.delete-expense', function () {
         let index = $(this).data('index');
         expenses.splice(index, 1);
-        updateTable();
+        updateTable(expenses);
     });
 
     $(document).on('click', '.edit-expense', function () {
@@ -54,6 +59,14 @@ $(document).ready(function () {
         $('#category').val(expense.category);
         $('#date').val(expense.date);
         expenses.splice(index, 1);
-        updateTable();
+        updateTable(expenses);
+    });
+
+    $('#search').on('input', function () {
+        let query = $(this).val().toLowerCase();
+        let filteredExpenses = expenses.filter(function (expense) {
+            return expense.name.toLowerCase().includes(query) || expense.category.toLowerCase().includes(query);
+        });
+        updateTable(filteredExpenses);
     });
 });

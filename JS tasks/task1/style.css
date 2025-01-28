@@ -1,36 +1,21 @@
-.form-container {
-    background-color: rgb(59, 137, 255);
-    width: 40%;
-    margin-left: 25pc;
-    margin-top: 6pc;
-    padding: 2pc;
-    border-radius: 15px;
+body {
+    background-color: #f8f9fa;
 }
-.form-container .form-group
-{
-    margin-left: 4pc;
+.container {
+    max-width: 800px;
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.form-container h2
-{
-    font-family: 'Poppins',sans-serif;
+h2 {
     text-align: center;
-    color: white;
+    margin-bottom: 20px;
 }
-.form-container label {
-    color: white;
-    font-size: 20px;
-}
-
-.form-container input {
-    width: 20pc;
-    padding:20px;
-}
-
-.form-container button:hover {
-    background-color: red;
-}
-
-.form-container span{
-    font-family: 'Poppins',sans-serif;
-    color: red;
+.total-expense {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
 }

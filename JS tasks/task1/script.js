@@ -1,136 +1,187 @@
-document.getElementById("quizform").addEventListener("submit", function(event) {
-  event.preventDefault();
+const questions = [
+    {
+        question: "Which method is used to remove the last element from an array?",
+        options: [
+            { answer: "pop()", isCorrect: true },
+            { answer: "shift()", isCorrect: false },
+            { answer: "push()", isCorrect: false },
+            { answer: "unshift()", isCorrect: false }
+        ]
+    },
+    {
+        question: "Which method is used to join all elements of an array into a string?",
+        options: [
+            { answer: "join()", isCorrect: true },
+            { answer: "concat()", isCorrect: false },
+            { answer: "slice()", isCorrect: false },
+            { answer: "splice()", isCorrect: false }
+        ]
+    },
+    {
+        question: "Which method creates a new array with all elements that pass a test?",
+        options: [
+            { answer: "filter()", isCorrect: true },
+            { answer: "map()", isCorrect: false },
+            { answer: "reduce()", isCorrect: false },
+            { answer: "forEach()", isCorrect: false }
+        ]
+    },
+    {
+        question: "Which of the following is not a valid JavaScript data type?",
+        options: [
+            { answer: "Number", isCorrect: false },
+            { answer: "String", isCorrect: false },
+            { answer: "Float", isCorrect: true },
+            { answer: "Boolean", isCorrect: false }
+        ]
+    },
+    {
+        question: "What will the following code output: `console.log(3 + '3')`?",
+        options: [
+            { answer: "33", isCorrect: true },
+            { answer: "6", isCorrect: false },
+            { answer: "NaN", isCorrect: false },
+            { answer: "Error", isCorrect: false }
+        ]
+    }
+];
 
-  let name = document.getElementById("name").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let nameError = document.getElementById("name_error");
-  let emailError = document.getElementById("email_error");
-
-  nameError.textContent = "";
-  emailError.textContent = "";
-
-  if (!validateName(name)) {
-      nameError.textContent = "Please enter a valid name";
-      nameError.style.color = "red";
-      return;
-  }
-  
-  if (!validateEmail(email)) {
-      emailError.textContent = "Please enter a valid email.";
-      emailError.style.color = "red";
-      return;
-  }
-  
-  document.getElementById("quizform").style.display = "none";
-  displayQuiz();
+$(document).ready(function () {
+    if (localStorage.getItem('username')) {
+        showQuizPage();
+    } else {
+        showLoginPage();
+    }
 });
 
-function validateName(name) {
-  let re = /^[A-Za-z\s]+$/;
-  return re.test(name);
+function showLoginPage() {
+    $('#loginPage').show();
+    $('#quizPage').hide();
+    $('#resultPage').hide();
+    $('#dashboardPage').hide();
 }
+
+function showQuizPage() {
+    $('#loginPage').hide();
+    $('#quizPage').show();
+    $('#resultPage').hide();
+    $('#dashboardPage').hide();
+
+    const username = localStorage.getItem('username');
+    let quizContent = '';
+    questions.forEach((q, index) => {
+        quizContent += `
+            <div class="mb-3">
+                <p>${q.question}</p>
+                ${q.options.map((option, i) => `
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question${index}" value="${i}" id="question${index}option${i}">
+                        <label class="form-check-label" for="question${index}option${i}">${option.answer}</label>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    });
+    $('#quizQuestions').html(quizContent);
+}
+
+function showResultPage() {
+    $('#loginPage').hide();
+    $('#quizPage').hide();
+    $('#resultPage').show();
+    $('#dashboardPage').hide();
+
+    const username = localStorage.getItem('username');
+    const score = localStorage.getItem('score');
+    const userAnswers = [];
+
+    questions.forEach((q, index) => {
+        const userAnswer = $("input[name='question" + index + "']:checked").val();
+        userAnswers.push(userAnswer === undefined ? 'No answer' : questions[index].options[userAnswer].answer);
+    });
+
+    let resultHtml = `<h4>${username}, your score is: ${score}/5</h4>`;
+    questions.forEach((q, index) => {
+        resultHtml += `
+            <p><b>${q.question}</b></p>
+            <p>Your answer: ${userAnswers[index]}</p>
+            <p>Correct answer: ${q.options[q.options.findIndex(option => option.isCorrect)].answer}</p>
+            <hr>
+        `;
+    });
+    $('#resultContent').html(resultHtml);
+}
+
+function showDashboard() {
+    $('#loginPage').hide();
+    $('#quizPage').hide();
+    $('#resultPage').hide();
+    $('#dashboardPage').show();
+
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    users.sort((a, b) => b.score - a.score);
+
+    let userTableHtml = '';
+    users.forEach((user, index) => {
+        userTableHtml += `
+            <tr>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>${user.score}</td>
+                <td>${index + 1}</td>
+            </tr>
+        `;
+    });
+
+    $('#userTable').html(userTableHtml);
+}
+
+// Login form submission
+$('#loginForm').submit(function (e) {
+    e.preventDefault();
+    const username = $('#username').val();
+    const email = $('#email').val();
+
+    if (username && validateEmail(email)) {
+        localStorage.setItem('username', username);
+        localStorage.setItem('email', email);
+        showQuizPage();
+    } else {
+        alert('Please enter a valid name and email.');
+    }
+});
+
+// Quiz form submission
+$('#quizForm').submit(function (e) {
+    e.preventDefault();
+    let score = 0;
+
+    questions.forEach((q, index) => {
+        const userAnswer = $("input[name='question" + index + "']:checked").val();
+        if (userAnswer !== undefined && q.options[userAnswer].isCorrect) {
+            score++;
+        }
+    });
+
+    const username = localStorage.getItem('username');
+    const email = localStorage.getItem('email');
+    let users = JSON.parse(localStorage.getItem('users') || '[]');
+    let user = users.find(u => u.email === email);
+
+    if (user) {
+        if (score > user.score) {
+            user.score = score;
+        }
+    } else {
+        users.push({ name: username, email: email, score: score });
+    }
+
+    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('score', score);
+    showResultPage();
+});
 
 function validateEmail(email) {
-  let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
-}
-
-function displayQuiz() {
-  let quizContainer = document.createElement("div");
-  quizContainer.innerHTML = `
-      <h2>JavaScript Quiz</h2>
-      <form id="quizQuestions">
-          <div class="form-group">
-              <label>1.Which method is used to remove the last element from an array?</label><br>
-              <input type="radio" name="q1" value="a">&nbsp pop()<br>
-              <input type="radio" name="q1" value="b">&nbsp shift()<br>
-              <input type="radio" name="q1" value="c">&nbsp push()<br>
-              <input type="radio" name="q1" value="d">&nbsp unshift()<br>
-          </div>
-          <div class="form-group">
-              <label>2. Which method is used to join all elements of an array into a string?</label><br>
-              <input type="radio" name="q2" value="a">&nbsp join() <br>
-              <input type="radio" name="q2" value="b">&nbsp concat() <br>
-              <input type="radio" name="q2" value="c">&nbsp slice() <br>
-              <input type="radio" name="q2" value="d">&nbsp splice() <br>
-          </div>
-          <div class="form-group">
-              <label>3. Which method creates a new array with all elements that pass a test?</label><br>
-              <input type="radio" name="q3" value="a">&nbsp filter() <br>
-              <input type="radio" name="q3" value="b">&nbsp map() <br>
-              <input type="radio" name="q3" value="c">&nbsp reduce() <br>
-              <input type="radio" name="q3" value="d">&nbsp forEach() <br>
-          </div>
-          <div class="form-group">
-              <label>4. Which of the following is not a valid JavaScript data type?</label><br>
-              <input type="radio" name="q4" value="a">&nbsp Number() <br>
-              <input type="radio" name="q4" value="b">&nbsp String() <br>
-              <input type="radio" name="q4" value="c">&nbsp Float() <br>
-              <input type="radio" name="q4" value="d">&nbsp Boolean() <br>
-          </div>
-          <div class="form-group">
-              <label>5. What will the following code output: "console.log(3 + '3')"?</label><br>
-              <input type="radio" name="q5" value="a">&nbsp 33 <br>
-              <input type="radio" name="q5" value="b">&nbsp 6 <br>
-              <input type="radio" name="q5" value="c">&nbsp NaN <br>
-              <input type="radio" name="q5" value="d">&nbsp Error <br>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit Quiz</button>
-      </form>
-      <div id="quizResults"></div>
-  `;
-
-  document.body.appendChild(quizContainer);
-
-    document.getElementById("quizQuestions").addEventListener("submit", function(event) {
-        event.preventDefault();
-        displayResults();
-  });
-}
-function displayResults() {
-  let correctAnswers = { q1: "a", q2: "a" , q3: "a", q4:"c", q5:"a"};
-  let resultsContainer = document.getElementById("quizResults");
-  resultsContainer.innerHTML = "<h3>Results:</h3>";
-  
-  let score = 0;
-  Object.keys(correctAnswers).forEach(question => {
-      let selected = document.querySelector(`input[name="${question}"]:checked`);
-      if (selected) {
-          let isCorrect = selected.value === correctAnswers[question];
-          resultsContainer.innerHTML += `<p>${question}: ${isCorrect ? "Correct ✅" : "Wrong ❌"}</p>`;
-          if (isCorrect) score++;
-      } else {
-          resultsContainer.innerHTML += `<p>${question}: No answer selected ❌</p>`;
-      }
-  });
-  resultsContainer.innerHTML += `<h4>Your Score: ${score} / ${Object.keys(correctAnswers).length}</h4>`;
-}
-if (window.location.pathname.includes("results.html")) {
-  document.addEventListener("DOMContentLoaded", function() {
-      let name = localStorage.getItem("username");
-      let email = localStorage.getItem("email");
-      let score = localStorage.getItem("score");
-      
-      let resultsContainer = document.createElement("div");
-      resultsContainer.innerHTML = `
-          <h2>Scores</h2>
-          <table class="table table-bordered">
-              <thead>
-                  <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Score</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>${name}</td>
-                      <td>${email}</td>
-                      <td>${score}</td>
-                  </tr>
-              </tbody>
-          </table>
-      `;
-      document.body.appendChild(resultsContainer);
-  });
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
 }
